@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="template">
+	<name>vmshop</name>
+	<creationDate>15 May 2016</creationDate>
+	<author>Pavel Müller</author>
+	<authorEmail>muller.pav@gmail.com</authorEmail>
+	<authorUrl>http://www.paginas-web-salta.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<description>Template for an eshop based on virtuemart component.</description>
+
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+	</files>
+
+	<positions>
+		<position>cart</position>
+		<position>search</position>
+		<position>breadcrumbs</position>
+		<position>main-menu</position>
+		<position>slider</position>
+		<position>left-menu</position>
+		<position>aviso</position>
+		<position>footer-menu</position>
+		<position>footer-categories</position>
+		<position>about-us</position>
+		<position>newsletter</position>
+		<position>social</position>
+		<position>copyright</position>
+	</positions>
+</extension>

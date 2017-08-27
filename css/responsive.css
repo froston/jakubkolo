@@ -1,0 +1,176 @@
+/**
+ * @author Pavel Müller
+ * @package Joomla
+ * @subpackage Accessible-Template-Beez
+ * @copyright Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.
+ * @license GNU/GPL, see LICENSE.php
+ * Joomla! is free software. This version may have been modified pursuant to the
+ * GNU General Public License, and as distributed it includes or is derivative
+ * of works licensed under the GNU General Public License or other free or open
+ * source software licenses. See COPYRIGHT.php for copyright notices and
+ * details.
+ */
+
+@media screen and (max-width:768px) {
+  #search-form, #cart {
+    display: none;
+  }
+  #main-nav .navbar-header .navbar-toggle {
+    display: inline-block;
+  }
+  #search-form {
+    position: absolute;
+    bottom: 21px;
+    left: 50%;
+    margin-left: -114px;
+    z-index: 10;
+    margin-top: 0;
+  }
+  #search-form.active {
+    display: block;
+  }
+  #search-form .search-input {
+    border-color: #e5e5e5;
+  }
+  #search-icon {
+    display: inline-block;
+  }
+  #cart-icon {
+    display: inline-block;
+  }
+}
+  
+@media screen and (min-width:768px) {
+  
+  .cd-multi-steps.text-bottom.count li > *::before {
+    /* this is the spot indicator */
+    content: counter(steps);
+    height: 26px;
+    width: 26px;
+    line-height: 26px;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+  .cd-multi-steps {
+    padding: 0 1.2em;
+  }
+  .cd-multi-steps li {
+    margin: 1.2em 0;
+  }
+  .cd-multi-steps li::after {
+    margin: 0 1em;
+  }
+  .cd-multi-steps li > * {
+    font-size: 1.6rem;
+  }
+  .cd-multi-steps {
+    /* reset style */
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+  }
+
+  .cd-multi-steps li {
+    position: relative;
+    float: none;
+    margin: 0.4em 40px 0.4em 0;
+  }
+  .cd-multi-steps li:last-of-type {
+    margin-right: 0;
+  }
+  .cd-multi-steps li::after {
+    /* this is the line connecting 2 adjacent items */
+    position: absolute;
+    content: '';
+    height: 4px;
+    background: #edeff0;
+    /* reset style */
+    margin: 0;
+  }
+  .cd-multi-steps li.visited::after {
+    background-color: #5bc0de;
+  }
+  .cd-multi-steps li > * {
+    position: relative;
+    color: #777;
+  }
+  .cd-multi-steps li.visited > *,
+  .cd-multi-steps li.current > * {
+    position: relative;
+    color: #5bc0de;
+  }
+
+  .cd-multi-steps.text-bottom li {
+    width: 80px;
+    text-align: center;
+  }
+  .cd-multi-steps.text-bottom li::after {
+    /* this is the line connecting 2 adjacent items */
+    position: absolute;
+    left: 50%;
+    /* 40px is the <li> right margin value */
+    width: calc(100% + 40px);
+  }
+  .cd-multi-steps.text-bottom li > *::before {
+    /* this is the spot indicator */
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #edeff0;
+  }
+  .cd-multi-steps.text-bottom li.visited > *::before,
+  .cd-multi-steps.text-bottom li.current > *::before {
+    background-color: #5bc0de;
+  }
+  .no-touch .cd-multi-steps.text-bottom a:hover {
+    color: #5bc0de;
+  }
+  .no-touch .cd-multi-steps.text-bottom a:hover::before {
+    box-shadow: 0 0 0 3px rgba(150, 192, 61, 0.3);
+  }
+
+  .cd-multi-steps.text-bottom li::after {
+    /* this is the line connecting 2 adjacent items */
+    top: 3px;
+  }
+  .cd-multi-steps.text-bottom li > * {
+    padding-top: 20px;
+  }
+  .cd-multi-steps.text-bottom li > *::before {
+    /* this is the spot indicator */
+    top: 0;
+  }
+
+  .cd-multi-steps.text-bottom.count li:not(.current) a::before { 
+    /* steps not visited yet - counter color */
+    color: #5bc0de;
+  }
+  .cd-multi-steps.text-bottom.count li:not(.current) em::before {
+    /* steps not visited yet - counter color */
+    color: #777;
+  }
+  
+  .cd-multi-steps.text-bottom.count li.visited a::before {
+    /* steps not visited yet - counter color */
+    color: #fff;
+  }
+
+  .cd-multi-steps.text-bottom.count li::after {
+    top: 11px;
+  }
+
+  .cd-multi-steps.text-bottom.count li > * {
+    padding-top: 34px;
+  }
+  
+ }

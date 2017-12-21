@@ -66,7 +66,7 @@ $verticalseparator = " vertical-separator";
         $caturl = JRoute::_ ( 'index.php?option=com_virtuemart&view=category&virtuemart_category_id=' . $category->virtuemart_category_id , FALSE);
 
           // Show Category ?>
-    <div class="category col-md-4">
+    <div class="category col-md-6">
         <div class="category-container">
             <div class="category-image">
                   <?php echo $category->images[0]->displayMediaFull("",false); ?>

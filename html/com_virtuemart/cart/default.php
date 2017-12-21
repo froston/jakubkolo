@@ -83,8 +83,8 @@ JHtml::_ ('behavior.formvalidation');
                     </div>
                     <div class="free-shipping-block"> 
                         <?php
-                        if ($this->cart->cartPrices["salesPrice"] < 500) {
-                            $iToFree = 500 - $this->cart->cartPrices["salesPrice"];
+                        if ($this->cart->cartPrices["salesPrice"] < 600) {
+                            $iToFree = 600 - $this->cart->cartPrices["salesPrice"];
                             ?>
                             <p><i class="icon-3x color-light fa fa-gift"></i> Nakupte ještě za <b><?php echo $iToFree;?> Kč</b> a dostanete dárek zdarma!</p>
                         <?php

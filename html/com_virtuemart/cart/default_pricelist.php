@@ -215,7 +215,34 @@ foreach ($this->cart->cartData['DATaxRulesBill'] as $rule) {
 	}
 }
 
+// ADDRESS
 if ( 	VmConfig::get('oncheckout_opc',true) or
+	!VmConfig::get('oncheckout_show_steps',false) or
+	(!VmConfig::get('oncheckout_opc',true) and VmConfig::get('oncheckout_show_steps',false) and
+		!empty($this->cart->BT['address_1']))
+) { 
+	$addr_type = $this->cart->STsameAsBT == 1 ? "BT" : "ST";
+?>
+<tr class="sectiontableentry1" style="vertical-align:top;">
+	<td colspan="6" style="align:left;vertical-align:top;">
+		<?php
+			echo '<h3>'.vmText::_ ('COM_VIRTUEMART_USER_FORM_SHIPTO_LBL').'</h3>';
+			echo $this->cart->{$addr_type}['first_name'] .' '. $this->cart->{$addr_type}['last_name'] .'<br/>';
+			echo !empty($this->cart->{$addr_type}['company']) ? $this->cart->{$addr_type}['company'] .'<br/>' : "";
+			echo $this->cart->{$addr_type}['address_1'] .', '. $this->cart->{$addr_type}['city'] .' '. $this->cart->{$addr_type}['zip'] .'<br/>';
+			echo shopfunctions::getCountryByID($this->cart->{$addr_type}['virtuemart_country_id']) . "<br/>";
+			echo !empty($this->cart->{$addr_type}['phone_2']) ? $this->cart->{$addr_type}['phone_2'] . "<br/>" : "";
+
+	if (!empty($this->layoutName) and $this->layoutName == 'default') {
+		echo JHtml::_('link', JRoute::_(JURI::base() . "kosik/index.php?option=com_virtuemart&view=user&task=editaddresscart&addrtype=BT", $this->useXHTML, $this->useSSL), 'Změnit adresu', 'class="link-shipment"');
+	} else {
+		echo vmText::_ ('COM_VIRTUEMART_USER_FORM_SHIPTO_LBL');
+	} ?>
+	</td>
+</tr>
+<?php } ?>
+
+<?php if ( 	VmConfig::get('oncheckout_opc',true) or
 	!VmConfig::get('oncheckout_show_steps',false) or
 	(!VmConfig::get('oncheckout_opc',true) and VmConfig::get('oncheckout_show_steps',false) and
 		!empty($this->cart->virtuemart_shipmentmethod_id) )

@@ -36,12 +36,12 @@ if ($this->doctype == 'invoice') {
             <strong><?php echo vmText::_('COM_VIRTUEMART_INVOICE_SUPPLIER') ?></strong> 
             <br>
 	    <table border="0">
-                <tr><td>Eva</td></tr>
-                <tr><td>Müllerová</td></tr>
+                <tr><td>Jakub</td></tr>
+                <tr><td>Müller</td></tr>
                 <tr><td>Karlovice 327</td></tr>
                 <tr><td>768 43</td></tr>
                 <tr><td>Kostelec u Holešova</td></tr>
-                <tr><td>05018676</td></tr>
+                <tr><td>06529852</td></tr>
                 <tr><td class="key" colspan="2">Nejsme plátci DPH</td></tr>
             </table>
 	</td>
